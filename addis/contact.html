@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Addis Tech Group</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">ADDIS TECH <span>GROUP</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="solutions.html">services </a>
+      <a href="platform.html">product</a>
+      <a href="team.html" class="active">BLOG</a>
+      <a href="contact.html" class="contact-link">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- Contact header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Let's build Ethiopia's smart future together</h1>
+      <p>Whether you're looking to pilot a smart system, collaborate on hardware development, or explore industrial IoT solutions.</p>
+    </div>
+  </section>
+
+  <!-- Contact grid -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact info -->
+        <div class="contact-info-card">
+          <h2>Get in touch</h2>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>engineering@addistechgroup.et</p>
+              <p>partnerships@addistechgroup.et</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+251 911 234 567</p>
+              <p>+251 911 234 568</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Bole, Addis Ababa</p>
+              <p>Ethiopia</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnership CTA -->
+        <div class="partnership-card">
+          <h2>Request a partnership meeting</h2>
+          <p>We're ready to discuss pilot projects, hardware collaboration, or industrial IoT deployments.</p>
+          <form id="contactForm" class="contact-form">
+            <input type="text" placeholder="Full name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="text" placeholder="Organization">
+            <select required>
+              <option value="">Select interest</option>
+              <option>Smart Home / Factory Automation</option>
+              <option>Asset Management Software</option>
+              <option>Smart Agriculture</option>
+              <option>Healthcare Asset Tracking</option>
+              <option>Partnership / Investment</option>
+            </select>
+            <textarea rows="4" placeholder="Message"></textarea>
+            <button type="submit" class="submit-btn">Send request</button>
+          </form>
+          <div id="formSuccess" class="success-message" style="display: none;">
+            Thank you. We'll respond within 48 hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <h3>Addis Tech Group</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Ayer tena, Addis Ababa, Ethiopia</p>
+        <p><i class="fas fa-envelope"></i> info@addistechgroup.et</p>
+        <p><i class="fas fa-phone-alt"></i> +251 91 222 5960</p>
+      </div>
+      <div class="footer-cta">
+        <p>Ready to innovate?</p>
+        <a href="#" class="disabled">Schedule a call</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© 2026 Addis Tech Group</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Simple form handling
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

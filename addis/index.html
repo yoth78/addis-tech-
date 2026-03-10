@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Addis Tech Group | Industrial IoT & Embedded Engineering</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter + IBM Plex Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation (shared) -->
+  <nav class="navbar">
+    <div class="logo">ADDIS TECH <span>GROUP</span></div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="solutions.html">services </a>
+      <a href="platform.html">product</a>
+      <a href="team.html">BLOG</a>
+      <a href="contact.html" class="contact-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with background image -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">Ethiopian engineering · diaspora-led</div>
+        <h1>Industrial IoT & embedded systems, built in Addis Ababa.</h1>
+        <p>End-to-end hardware and cloud solutions for smart industry, asset tracking, and assistive technology. 100% led by Ethiopian engineers.</p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-number">40+</span> <span class="stat-label">years combined US defense/tech</span></div>
+          <div class="stat"><span class="stat-number">15+</span> <span class="stat-label">integrated products</span></div>
+        </div>
+        <a href="solutions.html" class="hero-cta">Explore solutions →</a>
+      </div>
+      <!-- hero-image div removed -->
+    </div>
+  </section>
+
+  <!-- Core capabilities -->
+  <section class="container capabilities-section">
+    <h2 class="section-title">Specialized engineering</h2>
+    <div class="section-subhead">From schematic design to system integration — all core work led by Ethiopian engineers with rigorous processes.</div>
+    <div class="capability-grid">
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Custom PCB design</h3>
+        <p>Multi-layer, high-density boards for industrial and medical applications.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-code"></i></div>
+        <h3>Embedded firmware</h3>
+        <p>Real-time, secure code for ARM, RISC-V, and DSP platforms.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-flask"></i></div>
+        <h3>Hardware prototyping</h3>
+        <p>Rapid iteration, testing, and validation in our Addis lab.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-icon"><i class="fas fa-network-wired"></i></div>
+        <h3>IoT system integration</h3>
+        <p>End-to-end connectivity, from edge to cloud.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured products preview -->
+  <section class="featured-preview">
+    <div class="container">
+      <h2 class="section-title">Featured smart systems</h2>
+      <div class="preview-grid" id="featuredProducts"></div>
+      <div class="center-btn">
+        <a href="solutions.html" class="hero-cta" style="background: transparent; color:#1a3b5d; border:1px solid #1a3b5d;">View all products →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <h3>Addis Tech Group</h3>
+        <p><i class="fas fa-map-marker-alt"></i> ayer tena, Addis Ababa, Ethiopia</p>
+        <p><i class="fas fa-envelope"></i> info@addistechgroup.et</p>
+        <p><i class="fas fa-phone-alt"></i> +251 911 234 567</p>
+      </div>
+      <div class="footer-cta">
+        <p>Let's build Ethiopia's smart future.</p>
+        <a href="contact.html"><i class="fas fa-handshake"></i> Request partnership meeting</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© 2026 Addis Tech Group — All core engineering by Ethiopian engineers</span>
+      <span>Import substitution · industrial digitization</span>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal product data for featured preview
+    const products = [
+      { name: 'AddisMeter', desc: 'Smart energy monitor with cellular reporting' },
+      { name: 'AddisCam', desc: 'PoE smart camera for industrial monitoring' },
+      { name: 'AddisLight', desc: 'Intelligent lighting with IoT automation' },
+      { name: 'AddisHearing', desc: 'Digital hearing aid with DSP processing' },
+      { name: 'BlindStick', desc: 'Ultrasonic navigation for visually impaired' }
+    ];
+    // Load featured products (first 3)
+    const featured = products.slice(0, 3);
+    const featuredContainer = document.getElementById('featuredProducts');
+    if (featuredContainer) {
+      featuredContainer.innerHTML = featured.map(p => `
+        <div class="preview-card">
+          <div class="preview-icon"><i class="fas fa-cube"></i></div>
+          <h4>${p.name}</h4>
+          <p>${p.desc}</p>
+        </div>
+      `).join('');
+    }
+  </script>
+</body>
+</html>
